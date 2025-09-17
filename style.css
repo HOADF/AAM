@@ -74,7 +74,6 @@ body {
   background-color: #f5f5f5;
 }
 
-/* Кастомный tooltip (снизу, по центру) */
 .menu-item::after {
   content: attr(data-tooltip);
   position: absolute;
