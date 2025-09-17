@@ -63,6 +63,7 @@ body {
   cursor: pointer;
   font-size: 14px;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 .menu-item:last-child {
@@ -71,6 +72,30 @@ body {
 
 .menu-item:hover {
   background-color: #f5f5f5;
+}
+
+/* Кастомный tooltip */
+.menu-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  margin-left: 10px;
+  z-index: 100;
+}
+
+.menu-item:hover::after {
+  opacity: 1;
 }
 
 .toast {
