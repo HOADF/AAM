@@ -1,38 +1,56 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  background-color: #f5f5f5;
-}
-
-.container {
-  padding: 20px;
-  position: relative;
+  background-color: #e0e0e0;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  box-sizing: border-box;
 }
 
-h1 {
-  margin-top: 40px;
-  text-align: center;
-  color: #333;
+.mockup {
+  width: 360px;
+  height: 640px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 56px;
+  background-color: #3f51b5; /* не Telegram цвет */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .menu-icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
   cursor: pointer;
-  user-select: none;
+  font-size: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+  font-size: 14px;
+  color: #333;
 }
 
 .dropdown {
   position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: white;
+  top: 56px;
+  right: 16px;
+  background: white;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   display: none;
   flex-direction: column;
   min-width: 120px;
@@ -41,8 +59,9 @@ h1 {
 }
 
 .menu-item {
-  padding: 10px 15px;
+  padding: 10px 12px;
   cursor: pointer;
+  font-size: 14px;
   border-bottom: 1px solid #eee;
 }
 
@@ -51,5 +70,5 @@ h1 {
 }
 
 .menu-item:hover {
-  background-color: #f0f0f0;
+  background-color: #f5f5f5;
 }
