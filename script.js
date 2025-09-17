@@ -11,6 +11,15 @@ document.addEventListener("click", (e) => {
   }
 });
 
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
+}
+
 function menuAction(id) {
-  alert(`Вы выбрали пункт ${id}`);
+  showToast(`Вы выбрали пункт ${id}`);
 }
