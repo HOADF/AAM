@@ -74,13 +74,13 @@ body {
   background-color: #f5f5f5;
 }
 
-/* Кастомный tooltip */
+/* Кастомный tooltip (снизу, по центру) */
 .menu-item::after {
   content: attr(data-tooltip);
   position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
   white-space: nowrap;
   background: #333;
   color: #fff;
@@ -90,7 +90,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
-  margin-left: 10px;
+  margin-top: 6px;
   z-index: 100;
 }
 
@@ -112,12 +112,6 @@ body {
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 20;
-}
-.menu-item::after {
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  margin-top: 6px;
 }
 
 .toast.show {
