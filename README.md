@@ -36,10 +36,3 @@
 | ![Меню](screenshot2.jpg) | ![Подсказка](screenshot3.jpg) |
 
 ---
-
-## 🛠 Запуск локально
-
-1. Склонируйте репозиторий:
-   ```bash
-   git clone https://github.com/hoadf/telegram-style-menu.git
-   cd telegram-style-menu
